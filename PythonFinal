@@ -9,18 +9,6 @@ answer = 0
 selection = 0
 #Called Variables and arrays
 
-###Evan Stade###
-##Final Project##
-
-#Called Variables and arrays
-aryBooks=[]
-aryGames=[]
-GamesCumPrice = 0
-BooksCumPrice = 0
-answer = 0
-selection = 0
-#Called Variables and arrays
-
 #vTXT ARRAYv#
 Books = open("aryBooks.txt", "r")
 lines = Books.readlines()
