@@ -1,14 +1,29 @@
 ##Final Project##
 
-#vTXT ARRAYv#
-aryBooks = [["Pointless Meetings", 4.95], ["Killer Game Programming", 19.95], ["Phishing", 15.95]]
-aryGames = [["Putt Putt Joins the Zoo", 49.95], ["Pajama Sam", 25.00]]
-inventory = []
-
-#Called Variables
+#Called Variables and arrays
+aryBooks=[]
+aryGames=[]
+GamesCumPrice = 0
+BooksCumPrice = 0
 answer = 0
 selection = 0
-choice = 0
+#Called Variables and arrays
+
+#vTXT ARRAYv#
+Books = open("aryBooks.txt", "r")
+lines = Books.readlines()
+for i in lines:
+    aryBooks.append(i.split(", "))
+#
+Games = open("aryGames.txt", "r")
+lines1 = Games.readlines()
+for i in lines1:
+    aryGames.append(i.split(", "))
+
+Books.close()
+Games.close()
+#^TXT ARRAY^#
+
 
 #intro
 print "                    Welcome to Froggy's Books and Games!\n"
@@ -19,17 +34,19 @@ answer = raw_input ("Which item is being purchased? :\n1 - Books\n2 - Games\n")
 if answer == "1":
     print "You selected Books. Which book is being purchased?"
     for i in range(len(aryBooks)):
-		print i + 1, " - ",
-		print aryBooks[i][0], " - $", aryBooks[i][1]
+	    print i + 1, " - ",
+	    print aryBooks[i][0], " - $", aryBooks[i][1]
+#if Books
 
 #if Games
 if answer == "2":
     print "You selected Games. Which game is being purchased?"
     for i in range(len(aryGames)):
-		print i + 1, " - ",
-		print aryGames[i][0], " - $", aryGames[i][1]
+	    print i + 1, " - ",
+	    print aryGames[i][0], " - $", aryGames[i][1]
+#if Games
 
-choice = input ("?") + (len(aryBooks[i]))
 
-if choice == "1":
-	print "You selected " + (len(aryBooks))
+
+
+
