@@ -1,4 +1,3 @@
-###Evan Stade###
 ##Final Project##
 
 #Called Variables and arrays
@@ -9,6 +8,8 @@ GamesCumPrice = 0
 BooksCumPrice = 0
 answer = 0
 selection = 0
+bookqt=0
+gameqt=0
 choice=[]
 #Called Variables and arrays
 
@@ -29,32 +30,42 @@ Games.close()
 
 
 #intro
-print "                    Welcome to Froggy's Books and Games!\n"
-answer = raw_input ("Which item is being purchased? :\n1 - Books\n2 - Games\n")
-#intro
 
-#If Books
-if answer == "1":
-    print "You selected Books. Which book is being purchased?"
-    for i in range(len(aryBooks)):
-	    print i + 1, " - ",
-	    print aryBooks[i][0], " - $", aryBooks[i][1]
+def module():
+    print "                    Welcome to Froggy's Books and Games!\n"
+    answer = raw_input ("Which item is being purchased? :\n1 - Books\n2 - Games\n")
+    #intro
 
-    choice = input ("?")
-    users_choice = aryBooks[int(choice)-1]
-    print "You selected " + users_choice[0],
-    print ": How many?"
+    #If Books
+    if answer == "1":
+        print "You selected Books. Which book is being purchased?"
+        for i in range(len(aryBooks)):
+	        print i + 1, " - ",
+	        print aryBooks[i][0], " - $", aryBooks[i][1]
 
+        choice = input ("?")
+        users_choice = aryBooks[int(choice)-1]
+        print "You selected " + users_choice[0],
+        bookqt = (input("How Many"))
 
-#if Games
-if answer == "2":
-    print "You selected Games. Which game is being purchased?"
-    for i in range(len(aryGames)):
-	    print i + 1, " - ",
-	    print aryGames[i][0], " - $", aryGames[i][1]
+    #if Games
+    if answer == "2":
+        print "You selected Games. Which game is being purchased?"
+        for i in range(len(aryGames)):
+	        print i + 1, " - ",
+	        print aryGames[i][0], " - $", aryGames[i][1]
 
-    choice = input ("?")
-    users_choice = aryGames[int(choice)-1]
-    print "You selected " + users_choice[0],
-    print ": How many?"
+        choice = input ("?")
+        users_choice = aryGames[int(choice)-1]
+        print "You selected " + users_choice[0],
+        gameqt = (input("How Many Games"))
+module()
 
+cuntinue = raw_input ("Would you like to purchase more items? y or n\n")
+    
+if cuntinue == "y":
+    module()
+
+for i in range(len(shopping_cart)):
+    bookqt.append(shopping_cart[1])
+print shopping_cart
