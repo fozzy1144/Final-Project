@@ -1,3 +1,4 @@
+###Evan Stade###
 ##Final Project##
 
 #Called Variables and arrays
@@ -39,10 +40,11 @@ if answer == "1":
 	    print i + 1, " - ",
 	    print aryBooks[i][0], " - $", aryBooks[i][1]
 
-choice = input ("?")
-users_choice = aryBooks[int(choice)-1]
-print "You selected " + users_choice[0],
-print ": How many?"
+    choice = input ("?")
+    users_choice = aryBooks[int(choice)-1]
+    print "You selected " + users_choice[0],
+    print ": How many?"
+
 
 #if Games
 if answer == "2":
@@ -51,7 +53,8 @@ if answer == "2":
 	    print i + 1, " - ",
 	    print aryGames[i][0], " - $", aryGames[i][1]
 
-choice = input ("?")
-users_choice = aryGames[int(choice)-1]
-print "You selected " + users_choice[0],
-print ": How many?"
+    choice = input ("?")
+    users_choice = aryGames[int(choice)-1]
+    print "You selected " + users_choice[0],
+    print ": How many?"
+
