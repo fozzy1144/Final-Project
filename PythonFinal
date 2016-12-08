@@ -3,11 +3,12 @@
 #Called Variables and arrays
 aryBooks=[]
 aryGames=[]
+shopping_cart=[]
 GamesCumPrice = 0
 BooksCumPrice = 0
 answer = 0
 selection = 0
-#Called Variables and arrays
+choice=[]
 
 #vTXT ARRAYv#
 Books = open("aryBooks.txt", "r")
@@ -22,7 +23,7 @@ for i in lines1:
 
 Books.close()
 Games.close()
-#^TXT ARRAY^#
+
 
 
 #intro
@@ -38,8 +39,9 @@ if answer == "1":
 	    print aryBooks[i][0], " - $", aryBooks[i][1]
 
 choice = input ("?")
-users_choice = aryGames[int(choice)-1]
-print "You selected " + users_choice[0]
+users_choice = aryBooks[int(choice)-1]
+print "You selected " + users_choice[0],
+print ": How many?"
 
 #if Games
 if answer == "2":
@@ -50,4 +52,12 @@ if answer == "2":
 
 choice = input ("?")
 users_choice = aryGames[int(choice)-1]
-print "You selected " + users_choice[0]
+print "You selected " + users_choice[0],
+print ": How many?"
+
+while True:
+    select_item = choice
+    shopping_cart.append (select_item())
+    user_input = input("Are there any more items?")
+    if user_input.upper().startswith("N"):
+        break
