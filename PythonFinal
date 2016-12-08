@@ -9,6 +9,18 @@ answer = 0
 selection = 0
 #Called Variables and arrays
 
+###Evan Stade###
+##Final Project##
+
+#Called Variables and arrays
+aryBooks=[]
+aryGames=[]
+GamesCumPrice = 0
+BooksCumPrice = 0
+answer = 0
+selection = 0
+#Called Variables and arrays
+
 #vTXT ARRAYv#
 Books = open("aryBooks.txt", "r")
 lines = Books.readlines()
@@ -36,7 +48,10 @@ if answer == "1":
     for i in range(len(aryBooks)):
 	    print i + 1, " - ",
 	    print aryBooks[i][0], " - $", aryBooks[i][1]
-#if Books
+
+choice = input ("?")
+users_choice = aryGames[int(choice)-1]
+print "You selected " + users_choice[0]
 
 #if Games
 if answer == "2":
@@ -44,9 +59,7 @@ if answer == "2":
     for i in range(len(aryGames)):
 	    print i + 1, " - ",
 	    print aryGames[i][0], " - $", aryGames[i][1]
-#if Games
 
-
-
-
-
+choice = input ("?")
+users_choice = aryGames[int(choice)-1]
+print "You selected " + users_choice[0]
