@@ -9,6 +9,7 @@ BooksCumPrice = 0
 answer = 0
 selection = 0
 choice=[]
+#Called Variables and arrays
 
 #vTXT ARRAYv#
 Books = open("aryBooks.txt", "r")
@@ -23,7 +24,7 @@ for i in lines1:
 
 Books.close()
 Games.close()
-
+#^TXT ARRAY^#
 
 
 #intro
@@ -54,10 +55,3 @@ choice = input ("?")
 users_choice = aryGames[int(choice)-1]
 print "You selected " + users_choice[0],
 print ": How many?"
-
-while True:
-    select_item = choice
-    shopping_cart.append (select_item())
-    user_input = input("Are there any more items?")
-    if user_input.upper().startswith("N"):
-        break
